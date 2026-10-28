@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!-- Added in v0.1.0: NiyiSoft portfolio, single static page for GitHub Pages (no build step). -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Added in v0.1.0: name as written on the resume -->
+  <title>Adedeji Al-Ameen Oladunni Adeniyi Olayemi | NiyiSoft Portfolio</title>
+  <meta name="description" content="Portfolio of Adedeji Al-Ameen Oladunni Adeniyi Olayemi, a third-year Computer Science (Co-op) student at Acadia University who builds practical software under the NiyiSoft name: PC Diagnostics Toolkit, Cooking with Cookie and more.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0f1b33">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <!-- Added in v0.1.0: apply the saved/system theme before paint so the page doesn't flash. -->
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var saved = localStorage.getItem("niyisoft-theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+      } catch (e) { /* storage blocked: CSS falls back to the light theme */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Added in v0.1.0: skip link for keyboard and screen-reader users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="#top" aria-label="NiyiSoft, back to top">
+        <span class="brand-crown" aria-hidden="true">&#9813;</span>NiyiSoft
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <!-- Added in v0.1.0: light/dark toggle; label is updated by main.js -->
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+            <span class="theme-icon" aria-hidden="true">&#9790;</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Added in v0.1.0: hero / about -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="eyebrow">Computer Science student at Acadia University &middot; Builder</p>
+        <!-- Added in v0.1.0: name (as written on the resume) and tagline replace the [Your name] placeholder -->
+        <h1 id="hero-title">Adedeji Al-Ameen Oladunni Adeniyi Olayemi</h1>
+        <p class="tagline">I build software that solves real problems.</p>
+        <p class="lead">
+          I'm a third-year Computer Science (Co-op) student, open to co-op and internship roles. I like turning everyday problems into working tools,
+          from a program that explains why a PC is slow to a website for a Nigerian food side hustle.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my projects</a>
+          <a class="btn btn-ghost" href="https://github.com/Alameen-26" rel="noopener">GitHub profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <h2 id="about-title">About me</h2>
+          <p>
+            <!-- Added in v0.1.0: bio drawn from the resume (replaces the bio placeholder) -->
+            I'm a third-year Computer Science (Co-op) student at Acadia University in Wolfville, Nova Scotia,
+            and I'm looking for a co-op or internship. I build practical software in Python and Java, and I'm
+            interested in data visualization, deep learning and PC hardware and upgrades. Outside class I'm an
+            orientation leader and Vice President of Media &amp; Production for the Acadia Muslim Student Association.
+          </p>
+          <p>
+            I publish my work on GitHub as <a href="https://github.com/Alameen-26" rel="noopener">Alameen-26</a>.
+            I run tests on my projects every month and ship upgrades on a regular schedule, with every change written up in a changelog.
+          </p>
+        </div>
+        <aside class="about-card" aria-labelledby="niyisoft-title">
+          <h3 id="niyisoft-title">Why "NiyiSoft"?</h3>
+          <p>
+            NiyiSoft comes from my middle name, <strong>Adeniyi</strong>, a Yoruba name. It's the name I put on
+            everything I build: a reminder of where I come from and a promise that the work is done with care.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Added in v0.1.0: projects, real info only -->
+    <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Projects</h2>
+        <p class="section-intro">Things I've built and am still improving.</p>
+
+        <!-- Updated in v0.1.0: each finished project has its own section with screenshots, how it works and key features -->
+        <article class="project-feature" aria-labelledby="tk-title">
+          <div class="project-feature-head">
+            <h3 id="tk-title">PC Diagnostics Toolkit</h3>
+            <p>
+              A Python tool that explains what is slowing a PC down, spots likely hardware faults
+              (failing drives, worn batteries, overheating) and recommends upgrades that would actually help,
+              with free fixes listed first.
+            </p>
+          </div>
+          <div class="gallery-wrap">
+            <p class="gallery-hint">Screenshots (select one to open it full size):</p>
+            <ul class="gallery" aria-label="PC Diagnostics Toolkit screenshots">
+              <li>
+                <figure>
+                  <a href="assets/img/tk-terminal.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/tk-terminal.svg" width="1100" height="790" loading="lazy" alt="PowerShell window running 'python -m pcdiag demo slow_old_laptop': a summary of the CPU, memory, disk, GPU, temperature and battery, a verdict of 'Needs attention' with a health score of 41 out of 100, the top findings and suggested upgrades.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>1. A scan in the terminal: hardware summary, verdict, top findings and upgrades.</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a href="assets/img/tk-report-top.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/tk-report-top.svg" width="1000" height="640" loading="lazy" alt="Top of the HTML PC Health Report: a 'Needs attention' banner with a health score of 41 out of 100 and 'At a glance' cards for CPU, memory, disk space, temperature, battery and disk health, followed by the free fixes list.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>2. The HTML report: verdict, health score and an at-a-glance view.</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a href="assets/img/tk-report-upgrades.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/tk-report-upgrades.svg" width="1000" height="640" loading="lazy" alt="Further down the HTML report: 'Upgrades worth buying' ranked by impact and cost (SSD first, then more RAM, then an optional battery), and the first findings with a plain explanation and a 'What to do' tip.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>3. Upgrades ranked by impact and cost, and findings with what to do.</figcaption>
+                </figure>
+              </li>
+            </ul>
+            <p class="gallery-note">Screenshots use the toolkit's built-in demo PC (example data, not a real machine).</p>
+          </div>
+          <div class="project-details">
+            <div>
+              <h4>How it works</h4>
+              <p>
+                You run one command, <code>pcdiag scan</code>, and the toolkit reads the PC's hardware and system data:
+                CPU, memory, drives and their health, temperatures, battery, running processes and startup apps.
+                A set of rules checks those readings for common problems and turns them into a verdict and a
+                health score out of 100. It then writes an easy-to-read HTML report that lists free fixes first and
+                ranks any upgrades worth buying by impact and cost. Anything it can't measure is shown as
+                "Can't tell" instead of being guessed as healthy.
+              </p>
+            </div>
+            <div>
+              <h4>Key features</h4>
+              <ul class="feature-list">
+                <li>One-command scan of CPU, memory, drives, GPU, temperatures, battery and startup apps</li>
+                <li>Health score out of 100 with a plain-language verdict and 17 diagnostic checks</li>
+                <li>Self-contained HTML report (works in dark mode) plus raw JSON data</li>
+                <li>Free fixes first, then upgrades ranked by impact and cost</li>
+                <li>Optional speed benchmark, a compare command for before/after scans, and built-in demo PCs</li>
+                <!-- Kept "in testing" until v0.2.0 is merged to main -->
+                <li>Live monitoring and bottleneck analysis <span class="in-testing">(in testing)</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-foot">
+            <p class="visually-hidden">Built with:</p>
+            <ul class="tags">
+              <li>Python</li><li>psutil</li><li>PowerShell (CIM)</li><li>HTML/CSS</li><li>pytest</li><li>GitHub Actions</li>
+            </ul>
+            <a class="btn btn-small" href="https://github.com/Alameen-26/PC-Diagnostics-Toolkit" rel="noopener">
+              View on GitHub<span class="visually-hidden"> (PC Diagnostics Toolkit)</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-feature" aria-labelledby="ck-title">
+          <div class="project-feature-head">
+            <!-- Described as a side-hustle project, not an established business -->
+            <p class="status">Side-hustle project</p>
+            <h3 id="ck-title">Cooking with Cookie</h3>
+            <p>
+              A prototype website for a Nigerian food side hustle in Halifax, Nova Scotia, built as a portfolio project.
+              Visitors can browse the menu, plan an order, ask about bulk orders for events and chat with
+              <em>Ask Cookie</em>, a chatbot that answers questions about the food and shares recipes.
+            </p>
+          </div>
+          <div class="gallery-wrap">
+            <p class="gallery-hint">Screenshots (select one to open it full size):</p>
+            <ul class="gallery" aria-label="Cooking with Cookie screenshots">
+              <li>
+                <figure>
+                  <a href="assets/img/ck-menu-desktop.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/ck-menu-desktop.svg" width="1200" height="675" loading="lazy" alt="The 'Our Menu' section on a desktop browser: three dish cards (Jollof Rice and Peppered Chicken, Fried Rice, Nigerian Shawarma), each with a 'Photo coming soon' placeholder, a short description and a quantity box. The intro says pricing is coming soon.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>1. The menu on desktop, with a quantity box on every dish.</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a href="assets/img/ck-chat-desktop.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/ck-chat-desktop.svg" width="740" height="548" loading="lazy" alt="The Ask Cookie chat on desktop: the visitor asks 'What allergens are in puff-puff?' and Cookie replies that it likely contains wheat (gluten), based on a typical recipe and not verified, with a cross-contamination and severe-allergy warning.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>2. Ask Cookie answering an allergen question, with a safety note.</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a href="assets/img/ck-mobile.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/ck-mobile.svg" width="1200" height="1043" loading="lazy" alt="Two phone screenshots side by side: on the left the menu shown as a single column of dish cards, on the right the Ask Cookie chat with the allergen answer and a full-width message box.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>3. The same menu and chat on a phone.</figcaption>
+                </figure>
+              </li>
+            </ul>
+            <p class="gallery-note">Dish photos are placeholders until the owner's own food photos are added.</p>
+          </div>
+          <div class="project-details">
+            <div>
+              <h4>How it works</h4>
+              <p>
+                A Flask server in Python serves the website and a small JSON API from one address. The menu lives in an
+                SQLite database, and the page loads the dishes, descriptions and likely allergens from the API when it
+                opens. Ask Cookie answers with replies built from that same menu data, so every answer about a dish
+                matches the menu. Ordering is in demo mode: the order summary counts the dishes picked, and customers
+                place pickup or bulk orders by email or phone, not online.
+              </p>
+            </div>
+            <div>
+              <h4>Key features</h4>
+              <ul class="feature-list">
+                <li>Menu of 13 Nigerian dishes with quantity pickers and an order summary (demo mode, no online payment)</li>
+                <li>Ask Cookie chatbot for menu questions, ingredients, likely allergens and recipes</li>
+                <li>Allergen answers always flagged as unverified, with a cross-contamination warning</li>
+                <li>Bulk and event order enquiries, and a "Learn to Make It" recipe section</li>
+                <li>Prices switch: prices stay hidden until the owner turns them on</li>
+                <li>Responsive layout (3, 2 or 1 menu columns) and backend tests with pytest</li>
+                <li>Fried rice and grill choices, a Soups &amp; Stews section and real food photos <span class="in-testing">(coming soon)</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-foot">
+            <p class="visually-hidden">Built with:</p>
+            <ul class="tags">
+              <li>Python</li><li>Flask</li><li>SQLite</li><li>HTML/CSS</li><li>JavaScript</li><li>pytest</li>
+            </ul>
+            <a class="btn btn-small" href="https://github.com/Alameen-26/CookingWithCookie" rel="noopener">
+              View on GitHub<span class="visually-hidden"> (Cooking with Cookie)</span>
+            </a>
+          </div>
+        </article>
+
+        <h3 class="more-title">More projects</h3>
+        <div class="project-grid">
+          <article class="project-card is-soon">
+            <div class="project-media placeholder" role="img" aria-label="Placeholder: no screenshot yet">
+              <span>Screenshot coming soon</span>
+            </div>
+            <div class="project-body">
+              <p class="status">Coming soon</p>
+              <h3>Bug Tracker</h3>
+              <p>A web app for logging, assigning and tracking software bugs and test cases. In planning.</p>
+              <p class="visually-hidden">Planned stack:</p>
+              <ul class="tags">
+                <li>Flask</li><li>SQLite</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card is-soon">
+            <div class="project-media placeholder" role="img" aria-label="Placeholder: no screenshot yet">
+              <span>Screenshot coming soon</span>
+            </div>
+            <div class="project-body">
+              <p class="status">Coming soon</p>
+              <h3>Network Inventory &amp; Troubleshooting Tool</h3>
+              <p>A tool for listing the devices on a network and walking through common connection problems. In planning.</p>
+              <p class="visually-hidden">Planned stack:</p>
+              <ul class="tags">
+                <li>Python</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Added in v0.1.0: skills from the projects plus the ones listed on the resume -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <p class="section-intro">Languages, tools and know-how from my projects, classes and work.</p>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul><li>Python</li><li>Java</li><li>R (RStudio)</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Frameworks &amp; libraries</h3>
+            <ul><li>Flask</li><li>psutil</li><li>pytest</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Data &amp; analysis</h3>
+            <ul><li>Probability &amp; statistics</li><li>Data visualization</li><li>Deep learning</li><li>Power BI</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Developer tools &amp; practices</h3>
+            <ul><li>Git &amp; GitHub</li><li>GitHub Actions (CI)</li><li>SQLite</li><li>Visual Studio Code</li><li>IntelliJ</li><li>Spyder</li><li>Automated testing</li><li>Changelogs &amp; release planning</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Design &amp; office</h3>
+            <ul><li>Figma</li><li>Canva</li><li>Microsoft 365 (Excel, Word, Teams, SharePoint, PowerPoint)</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Hardware</h3>
+            <ul><li>PC components &amp; hardware upgrades</li><li>3D printing (models &amp; prototypes)</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Added in v0.1.0: education and experience, facts from the resume only -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 id="experience-title">Education &amp; experience</h2>
+        <div class="timeline-grid">
+          <div>
+            <h3 class="timeline-heading">Education</h3>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <p class="timeline-date">2024 &ndash; present</p>
+                <h4>Bachelor of Science in Computer Science (Co-op)</h4>
+                <p class="timeline-org">Acadia University, Wolfville, NS</p>
+                <p>Relevant courses: Software Engineering, Computer Architecture, Programming I (Python),
+                  Programming 2 (Java), Statistics, Discrete Math, Matrix Algebra, Calculus I &amp; II.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">Fall 2025</p>
+                <h4>Course project: Task Manager and Order Management System</h4>
+                <p class="timeline-org">Programming I (Python)</p>
+                <p>A modular Python command-line system for managing tasks and orders, with JSON storage,
+                  automatic tax and discount calculations and a live dashboard. Built in a team using Git.</p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="timeline-heading">Work</h3>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <p class="timeline-date">June &ndash; September 2026</p>
+                <h4>Packer</h4>
+                <p class="timeline-org">PepsiCo Foods, New Minas, NS</p>
+                <p>Kept packaging running smoothly in a fast-paced food plant, monitoring processes and working
+                  with production teams through 40-hour weeks.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">June &ndash; September 2025</p>
+                <h4>Production &amp; Packaging Worker</h4>
+                <p class="timeline-org">Apple Valley Foods, Kentville, NS</p>
+                <p>Operated machinery across several production stages and managed the workflow from processing
+                  to final packaging.</p>
+              </li>
+            </ol>
+            <h3 class="timeline-heading">Leadership &amp; volunteering</h3>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <p class="timeline-date">September 2025 &ndash; present</p>
+                <h4>Vice President, Media &amp; Production</h4>
+                <p class="timeline-org">Acadia Muslim Student Association</p>
+                <p>Designs event posters in Canva for social media and takes part in executive decisions on campus activities.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">January &ndash; April 2026</p>
+                <h4>Food Cupboard Volunteer</h4>
+                <p class="timeline-org">Acadia Student Union</p>
+                <p>Kept the food inventory recorded, checked and stored properly so students got fresh food.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date">September 2025 and 2026</p>
+                <h4>Orientation Leader</h4>
+                <p class="timeline-org">Acadia University</p>
+                <p>Planned orientation activities for new and returning students and faculty, working in groups.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Added in v0.1.0: contact (GitHub + email only) -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <h2 id="contact-title">Contact</h2>
+        <p class="section-intro">Hiring for a co-op or internship, or want to talk about a project? Get in touch.</p>
+        <ul class="contact-list">
+          <li><a class="btn btn-primary" href="mailto:alajiadeniyi@gmail.com">Email me</a>
+            <span class="contact-detail">alajiadeniyi@gmail.com</span></li>
+          <li><a class="btn btn-ghost" href="https://github.com/Alameen-26" rel="noopener">GitHub</a>
+            <span class="contact-detail">github.com/Alameen-26</span></li>
+          <!-- Added in v0.1.0: LinkedIn, from the resume -->
+          <li><a class="btn btn-ghost" href="https://www.linkedin.com/in/al-ameen-adedeji-05080632a" rel="noopener">LinkedIn</a>
+            <span class="contact-detail">linkedin.com/in/al-ameen-adedeji-05080632a</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Added in v0.1.0: footer with the NiyiSoft badge (swaps to the light badge in dark mode) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="footer-badge" aria-label="Made by NiyiSoft, back to top">
+        <img class="badge-for-light" src="assets/img/niyisoft-badge.svg" width="160" height="87" alt="Made by NiyiSoft">
+        <img class="badge-for-dark" src="assets/img/niyisoft-badge-light.svg" width="160" height="87" alt="Made by NiyiSoft">
+      </a>
+      <p>&copy; <span id="year">2026</span> NiyiSoft. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
