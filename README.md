@@ -49,6 +49,8 @@ yellow dashed box, so nothing is published by accident. Search for `TODO` to fin
   in the terminal and its HTML report, from the built-in demo PC (example data, not a real PC).
 - `ck-menu-desktop.svg`, `ck-chat-desktop.svg`, `ck-mobile.svg`: Cooking with Cookie (main branch) menu and
   Ask Cookie chat on desktop and on a phone.
+- `ns-scan.svg`, `ns-http-check.svg`, `ns-help-ping.svg`: NetScope (main branch) port scan with its guard rails,
+  HTTP/TLS check, and help and ping, run against this computer (localhost) and local test servers only.
 - Bug Tracker and Network Inventory & Troubleshooting Tool show a striped "Screenshot coming soon"
   placeholder until they are built.
 

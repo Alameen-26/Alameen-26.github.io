@@ -262,6 +262,85 @@
           </div>
         </article>
 
+        <article class="project-feature" aria-labelledby="ns-title">
+          <div class="project-feature-head">
+            <h3 id="ns-title">NetScope</h3>
+            <p>
+              A cross-platform Python command-line tool for network diagnostics: check whether a host is up, which
+              ports are open, what a name resolves to, which routers are in the way, and whether a website is healthy,
+              including when its TLS certificate expires. Results can be saved as JSON or HTML reports.
+            </p>
+          </div>
+          <div class="gallery-wrap">
+            <p class="gallery-hint">Screenshots (select one to open it full size):</p>
+            <ul class="gallery" aria-label="NetScope screenshots">
+              <li>
+                <figure>
+                  <a href="assets/img/ns-scan.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/ns-scan.svg" width="1077" height="586" loading="lazy" alt="Terminal running 'netscope scan localhost': 35 ports checked in 0.01 seconds, with 7 open ports listed with their service names and times. Below, scans of the public range 8.8.8.0/23 and the carrier-grade NAT address 100.64.0.1 are refused with a responsible-use reminder.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>1. A port scan of this computer, and two scans refused by the guard rails.</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a href="assets/img/ns-http-check.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/ns-http-check.svg" width="852" height="586" loading="lazy" alt="Terminal running 'netscope http' twice: a local web server answers 200 OK in 2.3 ms with its headers listed, and a local HTTPS server is flagged as not trusted because of a self-signed certificate that expired on 2021-01-01.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>2. HTTP and TLS checks: status, timing, headers and certificate expiry.</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a href="assets/img/ns-help-ping.svg" target="_blank" rel="noopener">
+                    <img src="assets/img/ns-help-ping.svg" width="903" height="802" loading="lazy" alt="Terminal showing 'netscope --help' with the seven commands (ping, scan, dns, trace, info, http, latency) and the exit codes, then 'netscope ping localhost -c 4' with 4 of 4 replies, 0% loss and under 1 ms latency.">
+                    <span class="visually-hidden"> (opens full size in a new tab)</span>
+                  </a>
+                  <figcaption>3. The built-in help and a ping with loss, latency and jitter.</figcaption>
+                </figure>
+              </li>
+            </ul>
+            <p class="gallery-note">Screenshots only check this computer (localhost) and local test servers.</p>
+          </div>
+          <div class="project-details">
+            <div>
+              <h4>How it works</h4>
+              <p>
+                Each command is a small Python module that returns a result object, which the command line prints as a
+                table, as JSON or as a saved report. The port scanner opens a TCP connection to each port with a timeout
+                and runs up to hundreds of checks at once in a thread pool, marking each port open, closed or filtered.
+                Ping and traceroute run the operating system's own tools and read their output in several languages, so
+                no administrator rights are needed, and ping falls back to timing TCP connections when ICMP is blocked.
+                Before anything is sent, guard rails check the target and refuse large public ranges and your internet
+                provider's address space.
+              </p>
+            </div>
+            <div>
+              <h4>Key features</h4>
+              <ul class="feature-list">
+                <li>Seven commands: ping, port scan, DNS lookup, traceroute, local network info, HTTP/TLS check and latency summary</li>
+                <li>Threaded TCP port scanner for a host, an IP or a small range, with service names and timing</li>
+                <li>HTTP checks with redirects, key headers, TLS version and days until the certificate expires</li>
+                <li>Table, JSON or saved HTML/JSON report output for every command</li>
+                <li>Runs on Windows, macOS and Linux with no required dependencies and no admin rights</li>
+                <li>389 tests that never touch the internet, plus mypy type checks</li>
+              </ul>
+              <p class="gallery-note">Built for networks you own or are allowed to test.</p>
+            </div>
+          </div>
+          <div class="project-foot">
+            <p class="visually-hidden">Built with:</p>
+            <ul class="tags">
+              <li>Python</li><li>Threads</li><li>pytest</li><li>mypy</li><li>CI on Linux, Windows &amp; macOS</li>
+            </ul>
+            <a class="btn btn-small" href="https://github.com/Alameen-26/NetScope" rel="noopener">
+              View on GitHub<span class="visually-hidden"> (NetScope)</span>
+            </a>
+          </div>
+        </article>
+
         <h3 class="more-title">More projects</h3>
         <div class="project-grid">
           <article class="project-card is-soon">

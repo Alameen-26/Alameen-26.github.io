@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here.
 
+## v0.2.0 (2026-10-29)
+
+- Projects: new NetScope section (cross-platform Python network diagnostics CLI) in the same style as the
+  PC Diagnostics Toolkit and Cooking with Cookie sections: 3 screenshots, a "How it works" paragraph,
+  key features, tech tags, a GitHub link and a note that it is built for networks you own or are
+  allowed to test.
+- New screenshots `ns-scan.svg`, `ns-http-check.svg` and `ns-help-ping.svg` in `assets/img/`.
+
 ## v0.1.0 (2026-10-28, published)
 
 - First version of the portfolio (2026-10-25), a single static page with no build step.
