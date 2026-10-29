@@ -2,6 +2,17 @@
 
 All notable changes to this project are documented here.
 
+## v0.3.0 (2026-10-29)
+
+- New NiyiSoft light/dark theme: `assets/css/niyisoft-theme.css` loads after `style.css`; the existing
+  toggle and saved choice are unchanged, and visitors without JavaScript follow their system setting.
+- Fonts: Inter, Space Grotesk and JetBrains Mono from Google Fonts (falls back to system fonts).
+- `theme-color` now follows light/dark.
+- Footer: the dark-mode badge is now the white/gold NiyiSoft badge.
+- PC Diagnostics Toolkit gallery is unchanged: it keeps the current report screenshots
+  (`tk-report-top.svg`, `tk-report-upgrades.svg`). The light/dark report screenshots will be added with
+  the toolkit's v0.4.0 release (2027-01-02).
+
 ## v0.2.0 (2026-10-29)
 
 - Projects: new NetScope section (cross-platform Python network diagnostics CLI) in the same style as the

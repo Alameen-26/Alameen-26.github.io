@@ -36,7 +36,7 @@ Then open <http://localhost:8000> in your browser. Press `Ctrl+C` in PowerShell 
 | What                        | Where                                   |
 | --------------------------- | --------------------------------------- |
 | Text, projects, contact     | `index.html`                            |
-| Colours, layout, dark mode  | `assets/css/style.css` (theme tokens at the top) |
+| Colours, layout, dark mode  | `assets/css/style.css` (base styles), then `assets/css/niyisoft-theme.css` (NiyiSoft light/dark theme, loaded after it) |
 | Theme toggle, phone menu    | `assets/js/main.js`                     |
 | Images and NiyiSoft badges  | `assets/img/`                           |
 
